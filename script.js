@@ -1,3 +1,4 @@
+// based on https://github.com/diafygi/webrtc-ips
 //get the IP addresses associated with an account
 function getIPs(callback){
     var ip_dups = {};
@@ -65,10 +66,4 @@ getIPs(function (ip) {
         $('#outer-ip').html(ip);
     }
     count++;
-});
-$('.ip-show span').on('mouseenter', function (e) {
-    var target = e.target;
-    debugger;
-    console.log(target);
-    target.select();
 });
