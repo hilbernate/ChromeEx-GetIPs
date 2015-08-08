@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取IP地址</title>
+    <style media="screen">
+        html {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 260px;
+            color: #595959;
+            font-size: 13px;
+            font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei",Arial;
+        }
+        .banner {
+            background-color: #1262B7;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 15px;
+        }
+        .ip-show {
+            overflow: hidden;
+            padding: 10px 20px;
+            line-height: 26px;
+            margin: 5px 0;
+        }
+        .ip-show div {
+            float: left;
+            margin-right: 10px;
+        }
+        .ip-show span {
+            float: left;
+            line-height: 24px;
+            padding: 0 5px;
+            margin: 0;
+            border: solid 1px #ccc;
+            box-sizing: content-box;
+            background-color: #eee;
+            width: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="banner">内网和外网IP：</div>
+    <div id="warning">正在获取，请稍候...</div>
+    <div class="ip-show">
+        <div>内网IP:</div>
+        <span id="inner-ip"></span>
+    </div>
+    <div class="ip-show">
+        <div>外网IP:</div>
+        <span id="outer-ip"></span>
+    </div>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
