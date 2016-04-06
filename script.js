@@ -62,8 +62,25 @@ getIPs(function (ip) {
     if (count == 0) {
         $('#inner-ip').html(ip);
     }
-    else {
+    else if (count == 1) {
         $('#outer-ip').html(ip);
     }
     count++;
+});
+
+$('#update-url').click(function (e) {
+    chrome.tabs.query(
+        {active: true},
+        function(tabs) {
+            var tab = tabs[0];
+
+            chrome.tabs.sendRequest(
+                tab.id,
+                {
+                    ip: $('#inner-ip').html()
+                }
+            );
+        // window.location.href = tabs[0].url.replace('http://.*?/', 'http://' + $('#inner-ip').html() + '/');
+        }
+    );
 });

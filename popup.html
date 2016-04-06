@@ -11,7 +11,7 @@
         body {
             margin: 0;
             padding: 0;
-            min-width: 260px;
+            min-width: 280px;
             color: #595959;
             font-size: 13px;
             font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei",Arial;
@@ -42,7 +42,28 @@
             border: solid 1px #ccc;
             box-sizing: content-box;
             background-color: #eee;
-            width: 150px;
+            width: 100px;
+        }
+
+        .ip-show button {
+            float: left;
+            display: block;
+            padding: 0 5px;
+            line-height: 26px;
+            height: 26px;
+            border-radius: 0;
+            background-color: #1262B7;
+            margin-left: 10px;
+            border: none;
+            outline: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .ip-show button:hover {
+            background-color: #0066B3;
+        }
+        .ip-show button:active {
+            background-color: #0D4580;
         }
 
     </style>
@@ -53,6 +74,7 @@
     <div class="ip-show">
         <div>内网IP:</div>
         <span id="inner-ip"></span>
+        <button id="update-url">使用此IP</button>
     </div>
     <div class="ip-show">
         <div>外网IP:</div>
