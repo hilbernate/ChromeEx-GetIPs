@@ -80,7 +80,6 @@ $('#update-url').click(function (e) {
                     ip: $('#inner-ip').html()
                 }
             );
-        // window.location.href = tabs[0].url.replace('http://.*?/', 'http://' + $('#inner-ip').html() + '/');
         }
     );
 });
